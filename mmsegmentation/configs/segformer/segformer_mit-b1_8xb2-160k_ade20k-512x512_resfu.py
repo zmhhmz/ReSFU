@@ -12,6 +12,6 @@ model = dict(
     decode_head=dict(type='SegformerHeadDirectGuideUp',
                      num_classes=150, 
                      in_channels=[64, 128, 320, 512],
-                     upsample_cfg=dict(type='resfu')))
+                     upsample_cfg=dict(type='resfu',guided=True)))
 
 

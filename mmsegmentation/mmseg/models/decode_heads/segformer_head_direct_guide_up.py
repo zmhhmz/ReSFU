@@ -44,8 +44,9 @@ class SegformerHeadDirectGuideUp(BaseDecodeHead):
                     stride=1,
                     norm_cfg=self.norm_cfg,
                     act_cfg=self.act_cfg))
-            self.upsample_modules.append(build_upsampler(self.upsample_cfg, in_channels=self.channels,
-                                                         scale_factor=scale_factors[i],guide_channels=self.channels))
+            if i>0:
+                self.upsample_modules.append(build_upsampler(self.upsample_cfg, in_channels=self.channels,
+                                                            scale_factor=scale_factors[i-1],guide_channels=self.channels))
 
         self.fusion_conv = ConvModule(
             in_channels=self.channels * num_inputs,
