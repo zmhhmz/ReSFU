@@ -1,0 +1,16 @@
+{
+    "files.associations": {
+        "*.md": "markdown",
+        "unordered_map": "cpp",
+        "vector": "cpp",
+        "exception": "cpp",
+        "fstream": "cpp",
+        "initializer_list": "cpp",
+        "istream": "cpp",
+        "new": "cpp",
+        "ostream": "cpp",
+        "sstream": "cpp",
+        "type_traits": "cpp",
+        "utility": "cpp"
+    }
+}
