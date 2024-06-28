@@ -7,7 +7,7 @@ class FNSAttnFunction(Function):
 
     @staticmethod
     def forward(ctx, attn, value, kernel_size):
-        assert attn.size(2) == kernel_size * kernel_size
+        assert attn.size(1) == kernel_size * kernel_size
         # assert (kernel_size - 1) % 2 == 0 and kernel_size >= 1
         ctx.kernel_size = kernel_size
 
