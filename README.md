@@ -22,10 +22,19 @@ python setup.py develop
 cd mmsegmentation/
 pip install -e .
 ```
-If you wish to use ReSFU in your own codes, you can check our main implementation [resfu.py](mmsegmentation/mmseg/models/upsamplers/resfu.py).
-
 ## Usage
+### Demo
+
+Please check our [demo](demo/demo.py) for the usage of ReSFU for non-hierarchical scenarios, e.g., Segmenter, and hierarchical scenarios, e.g., SegFormer.
+
+<div align="center">
+  <img src="imgs/demo.png" width="100%" height="100%"/>
+</div><br/>
+
+### MMSegmentation
+
 To train the Segmenter-S model with ReSFU, run:
+
 ```shell
 cd mmsegmentation/
 sh tools/dist_train.sh configs/segmenter/segmenter_vit-s_fcn_8xb1-160k_ade20k-512x512_resfu.py 8 \
