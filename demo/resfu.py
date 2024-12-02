@@ -79,7 +79,7 @@ class PCDC_Block(nn.Module):
         nn.init.kaiming_normal_(self.weight,mode='fan_out',nonlinearity='relu')
         torch.nn.init.zeros_(self.bias)
 
-    def forward(self, q, k):
+    def forward(self, k, q):
         # GroupNorm with shared affine weights
         q=self.norm(q)
         k=self.norm(k)
